@@ -7,17 +7,11 @@ package _01_random._5_magic_8_ball;
 import java.util.Random;
 
 public class Magic8Ball {
-
-	// 1. Make a main method that includes all the steps below
-
-	// 2. Get the user to enter a question for the 8 ball to answer
 	
-
-	// 3. Make a variable and initialize it to a random number.
-	//     ** You will need to make a random object!
-	//     Limit the random numbers to be between 0 and 3
-
+	Random random = new Random();
 	
+	int ballSays = random.nextInt(3);
+	//System.out.println(ballSays);
 	// 4. If the random number is 0
 
 	// -- tell the user "Yes"

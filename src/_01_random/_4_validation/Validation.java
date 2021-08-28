@@ -10,16 +10,37 @@ import javax.swing.JOptionPane;
 public class Validation {
 	public static void main(String[] args) {
 		
-		Random randomMaker = new Random();
+		Random ran = new Random();
 		
-		int randomNumber = randomMaker.nextInt(5);
+		int ranC;
 		
-		System.out.println(randomNumber);
-
-		// 1. Use each value of randomNumber to give the user a random compliment.
-
-		// 2. Repeat all the code above 10 times
+	for(int i=0; i<10; i++) {
 		
-		// 3. Find someone to test out your program. They will like it :)
+		ranC = ran.nextInt(6);
+		
+		System.out.println(ranC);
+		
+		if(ranC == 0) {
+			JOptionPane.showMessageDialog(null, "Test: Find x.\n" + (ran.nextInt(4)+2) + "(x-" + (ran.nextInt(3)+3) + ")+" + (ranC+1) + "^2 = (" + (ran.nextInt(4)+2) + "x-" + (ran.nextInt(11)+4) + ")/2");
+		}
+		else if(ranC == 1) {
+			JOptionPane.showMessageDialog(null, "You spent A HOLE WEEK geting dragon parts. How much pashonce do you have?");
+		}
+		else if(ranC == 2) {
+			JOptionPane.showMessageDialog(null, "Great hair you have! But why do you change your hair style EVERY. THREE. MONTHS. You're confuseing my brain!");
+		}
+		else if(ranC == 3) {
+			JOptionPane.showMessageDialog(null, "You probuly have the largest turtel colectshon out of everybudy I know.");
+		}
+		else if(ranC == 4) {
+			JOptionPane.showMessageDialog(null, "I am tired.");
+		}
+		else if(ranC == 5) {
+			JOptionPane.showMessageDialog(null, "Draw a turtle!");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "You are great at Breth of the Wild! But this message will never apear, so it is pointless saying this.");
+		}
+	}
 	}
 }
