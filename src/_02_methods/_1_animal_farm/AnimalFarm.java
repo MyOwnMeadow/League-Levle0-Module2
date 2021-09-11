@@ -24,7 +24,11 @@ public class AnimalFarm {
 	}
 	
 	void animals() {
-
+		String ani = "";
+		while(!ani.equalsIgnoreCase("exit")) {
+			ani = JOptionPane.showInputDialog("Welcom to the animol sound maker! Plese enter the animol you want to hear. Chose from the list below:\n" + "     Cow\n" + "     Duck\n" + "     Dog\n" + "     Cat\n" + "     Lama\n" + "Enter ''exit'' to stop runing the program.");
+		}
+		
 		/* 1. Ask the user which animal they want, then see and hear 
 		 *    the animal they chose using one of the methods below.
 		*/			 
