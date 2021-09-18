@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class lottery {
 	public static void main(String[] args) {
-		String input = JOptionPane.showInputDialog("What lotory would you like to enter?");
+		String input = JOptionPane.showInputDialog(null, "What lotory would you like to enter?", "Cashier", JOptionPane.INFORMATION_MESSAGE);
 		
 		Random ran = new Random();
 		

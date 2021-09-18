@@ -26,7 +26,32 @@ public class AnimalFarm {
 	void animals() {
 		String ani = "";
 		while(!ani.equalsIgnoreCase("exit")) {
-			ani = JOptionPane.showInputDialog("Welcom to the animol sound maker! Plese enter the animol you want to hear. Chose from the list below:\n" + "     Cow\n" + "     Duck\n" + "     Dog\n" + "     Cat\n" + "     Lama\n" + "Enter ''exit'' to stop runing the program.");
+			ani = JOptionPane.showInputDialog(null, "Welcom to the animol sound maker! Plese enter the animol you want to hear. Chose from the list below:\n" + "     Cow\n" + "     Duck\n" + "     Dog\n" + "     Cat\n" + "     Llama (yes, that's how its spelled)\n" + "Enter ''exit'' to stop runing the program.", "Animol Sound Mashing", JOptionPane.INFORMATION_MESSAGE);
+			
+			if(ani.equalsIgnoreCase("cow")) {
+				moo();
+			}
+			else if(ani.equalsIgnoreCase("duck")) {
+				quack();
+			}
+			else if(ani.equalsIgnoreCase("dog")) {
+				woof();
+			}
+			else if(ani.equalsIgnoreCase("cat")) {
+				meow();
+			}
+			else if(ani.equalsIgnoreCase("llama")) {
+				llamaScream();
+			}
+			else if(ani.equalsIgnoreCase("lama")) {
+				JOptionPane.showMessageDialog(null, "I know that may make sence, but lama is actshaly spelled ''llama,'' with 2 ls.\n" + "Please try agin.", "Ms. Llama", JOptionPane.INFORMATION_MESSAGE);
+			}
+			else if(ani.equalsIgnoreCase("exit")) {
+				JOptionPane.showMessageDialog(null, "Thanks for using Animol Soundmaker^tm!\n" + "Hope to see you agin soon!", "Animol Sound Mashing", JOptionPane.INFORMATION_MESSAGE);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "THE PROGRAM COULD NOT UNDERSTAND WHAT YOU SAID OR DOES NOT HAVE THAT ANIMAL.\n" + "PLEASE TRY AGIN.\n" + "(They have now becom a beter speller then me... grate)", "Roburt / ???", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
 		
 		/* 1. Ask the user which animal they want, then see and hear 

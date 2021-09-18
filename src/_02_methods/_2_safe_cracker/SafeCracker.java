@@ -23,13 +23,16 @@ public class SafeCracker {
 	public static void main(String[] args) {
 		new SafeCracker().crackTheSafe();
 	}
-
+	
 	void crackTheSafe() {
 		/*
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */		
-
+		for(int i = 10000000; i > -1; i--) {
+			tryCode(i);
+		}
+		System.out.println("[Roburt]: COULD NOT CRACK.");
 	}
 
 	 void tryCode(int guess) {
