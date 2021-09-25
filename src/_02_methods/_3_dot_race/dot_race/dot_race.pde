@@ -7,7 +7,7 @@
    * If you cannot play sound on this computer, set canPlaySounds to false.
    * If you are not sure, ask your teacher 
    * *****************/
-  boolean canPlaySounds = true;
+  boolean canPlaySounds = false;
 
 int x;
 
@@ -22,12 +22,30 @@ void draw() {
 
 	background(200, 200, 200);
     
+    stroke(5);
     fill(#02CEC2);
-    ellipse(50, 100, 50, 50);
+    ellipse(x, 100, 50, 50);
     
-    if(mousePressed) {
-      x += mouseX-200;
+    noStroke();
+    fill(#A70202);
+    rect(700, 0, 5, 200);
+    
+    if(x > 700) {
+      playSound();
     }
+    if(mousePressed) {
+      x += mouseX/20;
+      println("x = " + x);
+      
+      if(x > 800){
+        x = 0;
+      }
+      else if(x < 0) {
+        x = 800;
+      }
+     }
+    
+    
     //2. Draw an ellipse of height and width 50. Make sure to use the x variable for its X position. 
     //   Pick a y value that places it half way down the window.
       
@@ -44,7 +62,7 @@ void draw() {
 
 }
 
-/*
+
 import ddf.minim.*;
 boolean soundPlayed = false;
 void playSound() {
@@ -61,4 +79,3 @@ void playSound() {
   textSize(36);
   text("WINNER!!", width/2, height/2);
 }
-*/
