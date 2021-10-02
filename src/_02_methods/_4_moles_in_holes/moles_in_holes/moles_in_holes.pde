@@ -27,8 +27,17 @@ void setup() {
 
 void draw() {
   if(mousePressed) {
-    if(mouseY < e1Hight-30 && mouseY > e1Hight+30 && mouseX < e1-100 && mouseX > e1+100) {
-      drawMole(e1, e1Hight);
+    if(mouseY < e1Hight+30 && mouseY > e1Hight-30 && mouseX < e1+100 && mouseX > e1-100) {
+      drawMole(e1, e1Hight-15);
+    }
+    else if(mouseY < e2Hight+30 && mouseY > e2Hight-30 && mouseX < e2+100 && mouseX > e2-100) {
+      drawMole(e2, e2Hight-15);
+    }
+    else if(mouseY < e3Hight+30 && mouseY > e3Hight-30 && mouseX < e3+100 && mouseX > e3-100) {
+      drawMole(e3, e3Hight-15);
+    }
+    else if(mouseY < e4Hight+30 && mouseY > e4Hight-30 && mouseX < e4+100 && mouseX > e4-100) {
+      drawMole(e4, e4Hight-15);
     }
   }
 /* Write code here that uses the drawMole method to put a mole in each of the holes */

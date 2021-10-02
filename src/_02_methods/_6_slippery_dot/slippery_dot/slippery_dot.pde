@@ -1,28 +1,37 @@
 /*** When you are done, this program will draw an ellipse 
      that jumps to new location each time you click on it.
 ***/
- 
+ int eX = 500;
+ int eY = 300;
+ int eSize = 50;
  // 1. Create three integer variables to represent the x, y, and the size of the ellipse
        
     void setup() {
       // 2. Set the size of your sketch
+      size(1000, 600);
     
     }
     
     void draw() {
     
       // 3. Set the background color of your sketch
+      background(#008987);
       
+      noStroke();
+      fill(#6B03FF);
+      ellipse(eX, eY, eSize, eSize);
       // 4. Draw an ellipse using the variables created at the top of the sketch for the location and size of your ellipse. 
       //    Make sure it fits in the window. Change the variables if it does not.
-    
-    
     }
     
     /******** This method gets called automatically when you press the mouse ************/
     void mousePressed() {
       //5. Create an integer variable called distance
-      
+      int dist = getDistFromMouse(eX, eY);
+      if(dist < eSize) {
+        eX = (int) random(1000);
+        eY =(int) random(600);
+      }
       //6. The getDistanceFromMouse() method below returns a number.
       //   Set the value of your distance variable to the value returned by the getDistance method
       //   You will need to pass the x and y location of your ellipse to this method.
@@ -36,6 +45,6 @@
     }
     
     /********  This method gives you the number of pixels between the mouse and the x,y point ***********/
-    int getDistanceFromMouse(int x, int y) {
+    int getDistFromMouse(int x, int y) {
       return (int)Math.sqrt(Math.pow((mouseX-x),2) + Math.pow((mouseY-y),2));
     }
