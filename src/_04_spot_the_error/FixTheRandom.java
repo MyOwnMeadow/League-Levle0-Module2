@@ -1,5 +1,5 @@
 package _04_spot_the_error;
-
+						//FIXED!
 import java.util.Random;
 
 public class FixTheRandom {
@@ -12,7 +12,7 @@ public class FixTheRandom {
 		
 		Random random = new Random();
 		
-		int numnber = random.nextInt(5);
+		int numnber = random.nextInt(5)+5;		//Changed from "int numnber = random.nextInt(5);"
 		
 		if (numnber == 5) {
 			System.out.println("FIVE");

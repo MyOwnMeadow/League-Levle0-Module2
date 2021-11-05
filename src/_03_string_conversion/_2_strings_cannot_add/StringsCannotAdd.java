@@ -6,7 +6,7 @@ public class StringsCannotAdd {
 	public static void main(String[] args) {
 		// 1) Make a main method that includes all the steps below…. 
 		String quant1 = JOptionPane.showInputDialog("PLEASE ENTER THE NUMBERS YOU WOULD LIKE TO ADD.\n"
-				+ " (Please do so 1 at a time, the system also onley accsepts numbers)");
+				+ " (Please do so 1 at a time. The system also onley accsepts numbers)");
 		String quant2 = JOptionPane.showInputDialog("NEXT NUMBER:");
 		String quant3 = JOptionPane.showInputDialog("[This last number is optionol. If you don't want it, then just enter 0]");
 		
